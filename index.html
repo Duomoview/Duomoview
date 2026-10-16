@@ -16,41 +16,51 @@ body {
 
   font-family: Arial, sans-serif;
 
-  text-align: center;
+  max-width: 700px;
 
-  padding: 35px 20px;
+  margin: auto;
+
+  padding: 24px;
 
   background: #f8f5ef;
 
   color: #333;
 
+  line-height: 1.6;
+
 }
 
-h1 { color: #725638; }
+h1, h2 { color: #725638; }
 
-a {
+button {
 
-  display: block;
+  padding: 14px 20px;
 
-  max-width: 300px;
+  margin: 6px;
 
-  margin: 18px auto;
+  border: 0;
 
-  padding: 18px;
+  border-radius: 8px;
 
   background: #725638;
 
   color: white;
 
-  text-decoration: none;
-
-  border-radius: 10px;
-
-  font-size: 20px;
+  font-size: 17px;
 
 }
 
-p { line-height: 1.6; }
+.content {
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-top: 20px;
+
+}
 
 </style>
 
@@ -62,11 +72,69 @@ p { line-height: 1.6; }
 
 <p>Little tips for a happy and easy stay</p>
 
-<h2>Choose your language / Scegli la lingua</h2>
+<div style="text-align:center">
 
-<a href="index.pdf">🇬🇧 English</a>
+  <button onclick="showLanguage('en')">🇬🇧 English</button>
 
-<a href="index.pdf">🇮🇹 Italiano</a>
+  <button onclick="showLanguage('it')">🇮🇹 Italiano</button>
+
+</div>
+
+<div id="guide" class="content"></div>
+
+<script>
+
+const guides = {
+
+en: `
+
+<h2>Welcome!</h2>
+
+<p>Welcome to Duomo View Apartment. We wish you a pleasant and comfortable stay in Monreale.</p>
+
+<h2>Parking</h2>
+
+<p>Free parking is available under the building, subject to availability. If those spaces are occupied, street parking may be available nearby; some spaces are paid. Please check the signs.</p>
+
+<h2>Contact us</h2>
+
+<p>For assistance, contact your hosts:</p>
+
+<p>+447354809099<br>+393285392447</p>
+
+`,
+
+it: `
+
+<h2>Benvenuti!</h2>
+
+<p>Benvenuti al Duomo View Apartment. Vi auguriamo un soggiorno piacevole e confortevole a Monreale.</p>
+
+<h2>Parcheggio</h2>
+
+<p>Sotto l'edificio sono disponibili posti auto gratuiti, in base alla disponibilità. Se sono occupati, potrebbe essere possibile parcheggiare nelle strade vicine; alcuni posti sono a pagamento. Controllate sempre la segnaletica.</p>
+
+<h2>Contattateci</h2>
+
+<p>Per assistenza, potete contattare i vostri host:</p>
+
+<p>+447354809099<br>+393285392447</p>
+
+`
+
+};
+
+function showLanguage(lang) {
+
+  document.getElementById('guide').innerHTML = guides[lang];
+
+  document.documentElement.lang = lang;
+
+}
+
+showLanguage('en');
+
+</script>
 
 </body>
 
