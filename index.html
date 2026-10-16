@@ -16,51 +16,71 @@ body {
 
   font-family: Arial, sans-serif;
 
-  max-width: 700px;
-
-  margin: auto;
-
-  padding: 24px;
-
   background: #f8f5ef;
 
   color: #333;
 
-  line-height: 1.6;
+  max-width: 760px;
+
+  margin: auto;
+
+  padding: 20px;
+
+  line-height: 1.65;
 
 }
 
+header { text-align: center; padding: 12px 0; }
+
 h1, h2 { color: #725638; }
 
+h1 { font-size: 27px; }
+
+.subtitle { font-style: italic; }
+
+nav { text-align: center; margin: 20px 0; }
+
 button {
-
-  padding: 14px 20px;
-
-  margin: 6px;
-
-  border: 0;
-
-  border-radius: 8px;
 
   background: #725638;
 
   color: white;
 
-  font-size: 17px;
+  border: 0;
+
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
+  margin: 4px;
+
+  font-size: 16px;
+
+  cursor: pointer;
 
 }
 
-.content {
+section {
 
   background: white;
 
-  padding: 20px;
-
   border-radius: 12px;
 
-  margin-top: 20px;
+  padding: 16px;
+
+  margin: 14px 0;
+
+  overflow-wrap: anywhere;
 
 }
+
+h2 { font-size: 21px; margin-top: 0; }
+
+a { color: #725638; }
+
+.maplink { display: inline-block; margin: 5px 10px 5px 0; }
+
+footer { text-align: center; padding: 20px 0; color: #725638; }
 
 </style>
 
@@ -68,19 +88,23 @@ button {
 
 <body>
 
-<h1>Duomo View Apartment</h1>
+<header>
 
-<p>Little tips for a happy and easy stay</p>
+  <h1>DUOMO VIEW APARTMENT</h1>
 
-<div style="text-align:center">
+  <p class="subtitle">Little tips for a happy and easy stay</p>
+
+</header>
+
+<nav>
 
   <button onclick="showLanguage('en')">🇬🇧 English</button>
 
   <button onclick="showLanguage('it')">🇮🇹 Italiano</button>
 
-</div>
+</nav>
 
-<div id="guide" class="content"></div>
+<main id="guide"></main>
 
 <script>
 
@@ -88,37 +112,257 @@ const guides = {
 
 en: `
 
-<h2>Welcome!</h2>
+<section>
 
-<p>Welcome to Duomo View Apartment. We wish you a pleasant and comfortable stay in Monreale.</p>
+<h2>Need help?</h2>
+
+<p>Call or message us:<br>
+
+<a href="tel:+447354809099">+44 7354 809099</a><br>
+
+<a href="tel:+393285392447">+39 328 539 2447</a></p>
+
+</section>
+
+<section>
+
+<h2>Arrival and departure</h2>
+
+<p>Check-in from 3:00 PM. Check-out by 11:00 AM.
+
+Please switch off lights and A.C. and close the windows before leaving.</p>
+
+</section>
+
+<section>
+
+<h2>In the apartment</h2>
+
+<p>Wi-Fi: VodafoneGuest-WiFi<br>
+
+Password: DuomoViewApartment2025!</p>
+
+<p>Heating and A.C.: switch them off when you go out and keep windows closed while they are running. Please sort rubbish and recycling in the designated bins.</p>
+
+</section>
+
+<section>
+
+<h2>Getting here</h2>
+
+<p><strong>From Palermo Airport:</strong> taxi or private transfer is the simplest direct option. Public transport is possible via Palermo city; check current schedules.</p>
+
+<p><strong>From Palermo Centrale:</strong> take a bus or taxi towards Monreale; check routes and timetables on the day.</p>
+
+<p><strong>By car:</strong> the historic centre has narrow streets and limited parking. Follow local signs and check access restrictions.</p>
+
+</section>
+
+<section>
 
 <h2>Parking</h2>
 
-<p>Free parking is available under the building, subject to availability. If those spaces are occupied, street parking may be available nearby; some spaces are paid. Please check the signs.</p>
+<p><strong>1. Free parking:</strong> right outside the apartment, when available.</p>
 
-<h2>Contact us</h2>
+<p><strong>2. Blue-line street parking:</strong> look for marked blue bays nearby. Availability is not guaranteed; check the sign or meter for prices and payment rules (previously about €1/hour, always follow on-site signage).</p>
 
-<p>For assistance, contact your hosts:</p>
+<p><strong>3. Covered parking:</strong> Parking Monreale Duomo, Via Palermo 102, about 8–10 minutes on foot. Confirm prices and availability before arrival. If street parking is full, use it rather than circling the centre.</p>
 
-<p>+447354809099<br>+393285392447</p>
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Parking+Monreale+Duomo+Via+Palermo+102" target="_blank" rel="noopener">Directions to the car park ↗</a></p>
+
+</section>
+
+<section>
+
+<h2>Eat and drink nearby</h2>
+
+<p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=La+Barrique+Monreale" target="_blank" rel="noopener">La Barrique</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Osteria+Peper%27s+Monreale" target="_blank" rel="noopener">Osteria Peper’s</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Taverna+del+Pavone+Monreale" target="_blank" rel="noopener">Taverna del Pavone</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Antica+Pasticceria+Modica+Monreale" target="_blank" rel="noopener">Antica Pasticceria Modica</a>
+
+</p>
+
+<p>There is no kitchen in the apartment. Please check current opening hours.</p>
+
+</section>
+
+<section>
+
+<h2>Useful places</h2>
+
+<p>Pharmacies, supermarkets and ATMs are around central Monreale and the streets near the Duomo. Tap a link to see the nearest ones on the map and get directions from where you are. Hours may vary, especially on Sundays and public holidays. Emergencies: <strong>112</strong>.</p>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=pharmacy+near+Monreale+Cathedral" target="_blank" rel="noopener">Pharmacy ↗</a>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=supermarket+Monreale+Italy" target="_blank" rel="noopener">Supermarket ↗</a>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=ATM+Monreale+Italy" target="_blank" rel="noopener">ATM ↗</a>
+
+</section>
+
+<section>
+
+<h2>Don’t miss</h2>
+
+<p><strong>Monreale Cathedral and Cloister:</strong> allow time to visit and check opening times.</p>
+
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Monreale+Cathedral+and+Cloister" target="_blank" rel="noopener">Directions to the Cathedral ↗</a></p>
+
+<p><strong>La Ciambra:</strong> explore this historic neighbourhood and its narrow lanes respectfully.</p>
+
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=La+Ciambra+Monreale" target="_blank" rel="noopener">La Ciambra ↗</a></p>
+
+<p><strong>Palermo viewpoint:</strong> panoramic views over Palermo and the Conca d’Oro.</p>
+
+</section>
+
+<section>
+
+<h2>House rules</h2>
+
+<p>Quiet hours 10:00 PM–8:00 AM. No smoking inside. Pets are not allowed. Additional guests require prior authorisation. Please lock doors and windows when leaving.</p>
+
+</section>
+
+<footer>
+
+We wish you a pleasant and unforgettable stay with a beautiful view of the Duomo.
+
+</footer>
 
 `,
 
 it: `
 
-<h2>Benvenuti!</h2>
+<section>
 
-<p>Benvenuti al Duomo View Apartment. Vi auguriamo un soggiorno piacevole e confortevole a Monreale.</p>
+<h2>Avete bisogno di aiuto?</h2>
+
+<p>Chiamateci o scriveteci:<br>
+
+<a href="tel:+447354809099">+44 7354 809099</a><br>
+
+<a href="tel:+393285392447">+39 328 539 2447</a></p>
+
+</section>
+
+<section>
+
+<h2>Arrivo e partenza</h2>
+
+<p>Check-in dalle 15:00. Check-out entro le 11:00.
+
+Prima di uscire, spegnete le luci e l’aria condizionata e chiudete le finestre.</p>
+
+</section>
+
+<section>
+
+<h2>Nell’appartamento</h2>
+
+<p>Wi-Fi: VodafoneGuest-WiFi<br>
+
+Password: DuomoViewApartment2025!</p>
+
+<p>Riscaldamento e aria condizionata: spegneteli quando uscite e tenete le finestre chiuse mentre sono in funzione. Separate i rifiuti e la raccolta differenziata negli appositi contenitori.</p>
+
+</section>
+
+<section>
+
+<h2>Come arrivare</h2>
+
+<p><strong>Dall’aeroporto di Palermo:</strong> taxi o trasferimento privato sono le opzioni dirette più semplici. È possibile usare i mezzi pubblici passando dalla città di Palermo; controllate gli orari aggiornati.</p>
+
+<p><strong>Da Palermo Centrale:</strong> prendete un autobus o un taxi in direzione Monreale; controllate percorsi e orari il giorno del viaggio.</p>
+
+<p><strong>In auto:</strong> il centro storico ha strade strette e parcheggi limitati. Seguite la segnaletica locale e verificate le eventuali restrizioni di accesso.</p>
+
+</section>
+
+<section>
 
 <h2>Parcheggio</h2>
 
-<p>Sotto l'edificio sono disponibili posti auto gratuiti, in base alla disponibilità. Se sono occupati, potrebbe essere possibile parcheggiare nelle strade vicine; alcuni posti sono a pagamento. Controllate sempre la segnaletica.</p>
+<p><strong>1. Parcheggio gratuito:</strong> proprio davanti all’appartamento, quando disponibile.</p>
 
-<h2>Contattateci</h2>
+<p><strong>2. Parcheggio su strada con strisce blu:</strong> cercate gli stalli blu nelle vicinanze. La disponibilità non è garantita; controllate cartelli o parcometro per prezzi e modalità di pagamento (in precedenza circa 1 € all’ora; fate sempre riferimento alla segnaletica sul posto).</p>
 
-<p>Per assistenza, potete contattare i vostri host:</p>
+<p><strong>3. Parcheggio coperto:</strong> Parking Monreale Duomo, Via Palermo 102, a circa 8–10 minuti a piedi. Verificate prezzi e disponibilità prima dell’arrivo. Se i parcheggi su strada sono pieni, utilizzate questo parcheggio invece di girare continuamente per il centro.</p>
 
-<p>+447354809099<br>+393285392447</p>
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Parking+Monreale+Duomo+Via+Palermo+102" target="_blank" rel="noopener">Indicazioni per il parcheggio ↗</a></p>
+
+</section>
+
+<section>
+
+<h2>Dove mangiare e bere</h2>
+
+<p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=La+Barrique+Monreale" target="_blank" rel="noopener">La Barrique</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Osteria+Peper%27s+Monreale" target="_blank" rel="noopener">Osteria Peper’s</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Taverna+del+Pavone+Monreale" target="_blank" rel="noopener">Taverna del Pavone</a> ·
+
+<a href="https://www.google.com/maps/search/?api=1&query=Antica+Pasticceria+Modica+Monreale" target="_blank" rel="noopener">Antica Pasticceria Modica</a>
+
+</p>
+
+<p>L’appartamento non dispone di cucina. Verificate gli orari di apertura aggiornati.</p>
+
+</section>
+
+<section>
+
+<h2>Luoghi utili</h2>
+
+<p>Farmacie, supermercati e sportelli bancomat si trovano nel centro di Monreale e nelle strade vicino al Duomo. Toccate un collegamento per vedere sulla mappa i luoghi più vicini e ottenere indicazioni dalla vostra posizione. Gli orari possono variare, soprattutto la domenica e nei giorni festivi. Emergenze: <strong>112</strong>.</p>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=pharmacy+near+Monreale+Cathedral" target="_blank" rel="noopener">Farmacia ↗</a>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=supermarket+Monreale+Italy" target="_blank" rel="noopener">Supermercato ↗</a>
+
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=ATM+Monreale+Italy" target="_blank" rel="noopener">Bancomat ↗</a>
+
+</section>
+
+<section>
+
+<h2>Da non perdere</h2>
+
+<p><strong>Duomo di Monreale e Chiostro:</strong> dedicate del tempo alla visita e controllate gli orari di apertura.</p>
+
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Monreale+Cathedral+and+Cloister" target="_blank" rel="noopener">Indicazioni per il Duomo ↗</a></p>
+
+<p><strong>La Ciambra:</strong> esplorate con rispetto questo quartiere storico e i suoi vicoli stretti.</p>
+
+<p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=La+Ciambra+Monreale" target="_blank" rel="noopener">La Ciambra ↗</a></p>
+
+<p><strong>Belvedere di Palermo:</strong> vista panoramica su Palermo e sulla Conca d’Oro.</p>
+
+</section>
+
+<section>
+
+<h2>Regole della casa</h2>
+
+<p>Orari di silenzio: dalle 22:00 alle 08:00. È vietato fumare all’interno. Gli animali non sono ammessi. Eventuali ospiti aggiuntivi devono essere autorizzati in anticipo. Chiudete a chiave porte e finestre quando uscite.</p>
+
+</section>
+
+<footer>
+
+Vi auguriamo un soggiorno piacevole e indimenticabile, con una splendida vista sul Duomo.
+
+</footer>
 
 `
 
@@ -129,6 +373,8 @@ function showLanguage(lang) {
   document.getElementById('guide').innerHTML = guides[lang];
 
   document.documentElement.lang = lang;
+
+  window.scrollTo(0, 0);
 
 }
 
